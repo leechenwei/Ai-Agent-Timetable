@@ -1,3 +1,5 @@
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/69482948-526c-41d2-a247-696e1df11ac4" />
+
 # Ai-Agent-Timetable
 <h3>A smart, AI-powered timetable system for students and teachers, built with React Native, Flask, Firebase, and SambaNova Cloud Api(Meta-Llama). This project helps users efficiently schedule their courses, resolve conflicts, and manage their daily routines with AI assistance.</h3>
 
@@ -42,5 +44,7 @@ Backend: python app.py<br>
 <br><br>
 <h2 style="color: red;">! IMPORTANT INFORMATION</h2>
 <h5>1. Create the .env file on /AiScheduler/.env and replace with your own credentials and information</h5>
+<img width="1092" alt="image" src="https://github.com/user-attachments/assets/aec56365-d4f3-4956-abd8-6a77e29eaa9b" />
+
 <h5>2. Retrieve SAMBANOVA CLOUD API key/Model from <a href="https://cloud.sambanova.ai/apis" target="_blank">SambaNova Cloud</a></h5>
 <h5>3. Retrieve Firebase .json Credential file from <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></h5>
