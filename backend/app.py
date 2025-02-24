@@ -7,6 +7,7 @@ import openai
 import os
 from dotenv import load_dotenv
 import re
+from flask_cors import cross_origin
 
 dotenv_path = os.path.abspath("../AiScheduler/AiScheduler/.env")
 load_dotenv(dotenv_path)
@@ -24,13 +25,14 @@ db = firestore.client()
 
 api_key = os.getenv("SAMBANOVA_API_KEY")
 base_url = os.getenv("SAMBANOVA_BASE_URL")
-APIModel = os.getenv("")
+APIModel = os.getenv("SAMBANOVA_API_MODEL")
 client = openai.OpenAI(api_key=api_key, base_url=base_url)
 
 # ✅ Store Pending Requests
 pending_requests = {}
 
 @app.route('/chat', methods=['POST'])
+@cross_origin()
 def chat():
     data = request.json
     user_id = data.get("user_id", "")
@@ -38,7 +40,7 @@ def chat():
 
     if not user_id:
         return jsonify({"error": "User ID is required"}), 400
-
+    
     try:
         # Retrieve full timetable history
         timetable_ref = db.collection("timetables").document(user_id).collection("dates")
@@ -51,7 +53,7 @@ def chat():
         print("📅 Full Timetable History:", json.dumps(full_timetable_history, indent=2))
 
         timetable_history_str = json.dumps(full_timetable_history)
-
+        
         # ✅ Check if user is confirming a conflict resolution
         user_replying_to_conflict = False
         if user_id in pending_requests:
@@ -64,7 +66,7 @@ def chat():
                 user_message = f"User confirmed replacement. Replace {original_request}."
 
                 # Prevent infinite conflict loop
-                del pending_requests[user_id]  
+                del pending_requests[user_id] 
 
         response = client.chat.completions.create(
             model=APIModel,
@@ -169,4 +171,4 @@ f"{timetable_history_str}\n"
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8000, debug=True)
+    app.run(host='localhost', port=8001, debug=True)
