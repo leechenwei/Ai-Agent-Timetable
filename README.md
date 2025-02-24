@@ -1,5 +1,8 @@
 # Ai-Agent-Timetable
 <h3>A smart, AI-powered timetable system for students and teachers, built with React Native, Flask, Firebase, and SambaNova Cloud Api(Meta-Llama). This project helps users efficiently schedule their courses, resolve conflicts, and manage their daily routines with AI assistance.</h3>
+
+<h3>🌐📱 Works for Web / Mobile</h3>
+
 <b><h3>🚀 Features</h3></b>
 📆 <b>Automated Timetable Scheduling</b>: AI arranges schedules based on user input.
 <br>🧠 <b>AI Chatbot Integration</b>: Users interact with the chatbot to modify and update their timetable.
