@@ -31,6 +31,12 @@ client = openai.OpenAI(api_key=api_key, base_url=base_url)
 # ✅ Store Pending Requests
 pending_requests = {}
 
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({"message": "Flask is working!"})
+
+
+
 @app.route('/chat', methods=['POST'])
 @cross_origin()
 def chat():
@@ -47,6 +53,7 @@ def chat():
         timetable_docs = timetable_ref.stream()
 
         full_timetable_history = {}
+
         for doc in timetable_docs:
             full_timetable_history[doc.id] = doc.to_dict()
 
