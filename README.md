@@ -35,3 +35,9 @@ Users can download their schedules as PDFs/CSVs or PNG.
 Frontend: npx expo start<br>
 Backend: python app.py<br>
 
+
+<br><br>
+<h2 style="color: red;">! IMPORTANT INFORMATION</h2>
+<h5>1. Checkout the .env file and replace with your own credentials and information</h5>
+<h5>2. Retrieve SAMBANOVA CLOUD API key/Model from <a href="https://cloud.sambanova.ai/apis" target="_blank">SambaNova Cloud</a></h5>
+<h5>3. Retrieve Firebase .json Credential file from <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></h5>
