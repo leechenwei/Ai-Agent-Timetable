@@ -27,7 +27,7 @@ Users can download their schedules as PDFs/CSVs or PNG.
 <b><h3>🔧 Setup & Installation</h3></b>
 <h4>1. Clone the repo:</h4>
 <tab>git clone https://github.com/leechenwei/AI-Agent-Timetable.git</tab><br>
-<tab>cd AI-Agent-Timetable</tab>
+<tab>cd AiScheduler</tab>
 <br><br>
 <h4>2. Install dependencies:</h4>
 <tab>npm install  # For React Native</tab><br>
@@ -35,7 +35,7 @@ Users can download their schedules as PDFs/CSVs or PNG.
 <br>
 <br>
 <h5>Run the project:</h5>
-Frontend: npx expo start<br>
+Frontend: npx expo start  # Make sure you cd to AiScheduler first <br> 
 Backend: python app.py<br>
 
 
